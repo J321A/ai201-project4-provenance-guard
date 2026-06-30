@@ -1,4 +1,4 @@
-"""Provenance Guard — backend for classifying text as human- vs AI-written.
+"""Provenance Guard — backend for classifying text as human: vs AI-written.
 
 Endpoints:
   POST /submit  -> classify content, return attribution + confidence + label

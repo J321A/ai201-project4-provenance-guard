@@ -181,4 +181,4 @@ back to stylometry alone and flag the result as `degraded`.
 - **M5 (production layer):** Provide Label-variants + Appeals sections + diagram.
   Ask for the label generator and `POST /appeal`. Verify all three label
   variants are reachable and that an appeal flips status to `under_review` and
-  logs alongside the original decision.
+  logs alongside the original decision

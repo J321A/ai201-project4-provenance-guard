@@ -277,7 +277,7 @@ review *before* showing any label.
 - **Where the spec helped:** writing the three label variants *verbatim in
   planning.md before coding* forced the asymmetry decision early — the uncertain
   label "makes no claim" because the spec made us name what 0.5 means to a user
-  first. The label function became a near-mechanical translation of that table.
+  first. The label function became a near-mechanical translation of that table
 - **Where the implementation diverged:** planning.md originally defined the
   uncertain confidence as `1 − 2·|p_ai − 0.5|`, which produced a *high* number
   near the boundary (e.g. 0.80) — misleading on an "uncertain" label. During
@@ -298,3 +298,5 @@ review *before* showing any label.
   to the asymmetric `0.65 / 0.40` bands and replaced its boundary-peaking
   confidence formula with `max(p_ai, 1−p_ai)` after testing showed the original
   reported misleadingly high confidence on uncertain cases.
+
+
