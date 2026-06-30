@@ -21,7 +21,7 @@ pip install -r requirements.txt
 
 echo "GROQ_API_KEY=your_key_here" > .env   # already gitignored
 
-python app.py            # serves on http://localhost:5000
+python app.py            # serves on http://localhost:5050
 ```
 
 > macOS note: port 5000 is often taken by AirPlay Receiver. If so, run
@@ -42,7 +42,7 @@ response rather than failing.
 | `GET`  | `/log` | `?limit=N` | recent structured audit entries |
 
 ```bash
-curl -s -X POST http://localhost:5000/submit \
+curl -s -X POST http://localhost:5050/submit \
   -H "Content-Type: application/json" \
   -d '{"text": "The sun dipped below the horizon...", "creator_id": "test-user-1"}' \
   | python -m json.tool
@@ -155,7 +155,7 @@ No automated re-classification — a human reviewer reads the original
 `classification` entry and the `appeal` entry side by side via `GET /log`.
 
 ```bash
-curl -s -X POST http://localhost:5000/appeal \
+curl -s -X POST http://localhost:5050/appeal \
   -H "Content-Type: application/json" \
   -d '{"content_id": "PASTE-ID", "creator_reasoning": "I wrote this myself; I am a non-native speaker so my style reads formal."}'
 ```
